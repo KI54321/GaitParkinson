@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GaitWatch</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="./static/css/vendors/aos.css" rel="stylesheet" />
+    <link href="./static/style.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8819936066942025"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    .topDiv {
+      /* Default margin-top value for desktop */
+      margin-top: 270px;
+    }
+
+    /* Media query for mobile devices */
+    @media (max-width: 768px) {
+      .topDiv {
+        /* Updated margin-top value for mobile */
+        margin-top: 150px;
+      }
+    }
+  </style>
+
+  <body
+    class="font-inter antialiased text-black-100 tracking-tight bg-slate-50"
+  >
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden">
+      <!-- Site header -->
+      <header class="absolute w-full z-30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="flex items-center justify-between h-16 md:h-20">
+            <!-- Site branding -->
+            <div class="flex items-center">
+              <!-- Logo -->
+
+              <a class="text-lg block" href="/" aria-label="Cruip">
+                <b>GaitWatch</b>
+              </a>
+            </div>
+
+            <!-- Desktop navigation -->
+            <nav class="flex grow">
+              <!-- Desktop sign in links -->
+              <ul class="flex grow justify-end flex-wrap items-center">
+                <!-- <li>
+                                <a class="font-medium text-gray-400 hover:text-blue-500 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out" href="signin.html">Sign in</a>
+                            </li> -->
+
+                <li class="ml-3">
+                  <a
+                    class="btn-sm text-white bg-gradient-to-t from-blue-600 to-blue-400 hover:to-blue-500 w-full shadow-lg group rounded-full"
+                    href="/dashboard"
+                  >
+                    Dashboard
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <hr />
+      </header>
+
+      <!-- Page content -->
+      <main class="grow">
+        <!-- Hero -->
+        <section class="relative overflow-hidden">
+          <!-- Bg gradient -->
+
+          <!-- Illustration -->
+          <div
+            class="absolute left-1/2 -translate-x-1/2 pointer-events-none -z-10"
+            aria-hidden="true"
+          ></div>
+
+          <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="topDiv">
+              <!-- Hero content -->
+
+              <h1
+                class="h1 font-uncut-sans mb-6"
+                data-aos="zoom-out"
+                data-aos-delay="100"
+              >
+                Easily detect <br />
+                <span id="differentBusinesses" class="text-blue-500"></span>
+              </h1>
+
+              <div data-aos="zoom-out" class="py-10">
+                <div
+                  class="relative text-xl text-gray-300 bg-gray-800 rounded-full inline-block px-4 py-1 mb-6 before:content-[''] before:absolute before:-z-10 before:inset-0 before:-m-0.5 before:bg-gradient-to-t before:from-gray-800 before:to-gray-800 before:via-gray-600 before:rounded-full"
+                >
+                  <a href="/dashboard">
+                    <div class="text-gray-200">
+                      Continue
+                      <!-- <a
+                      class="font-medium text-blue-500 inline-flex items-center transition duration-150 ease-in-out group"
+                      href="#0"
+                      >Learn More
+                      <span
+                        class="tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1"
+                        >-&gt;</span
+                      ></a
+                    > -->
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features -->
+        <section class="py-10">
+          <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <hr data-aos="zoom-out" />
+            <div class="py-12 md:py-20">
+              <!-- Section header -->
+              <div class="text-center pb-12 md:pb-20">
+                <h2 class="h2 font-uncut-sans" data-aos="zoom-out">
+                  Easily Monitor Your Gait
+                </h2>
+              </div>
+
+              <!-- <div class="pb-16" data-aos="zoom-out">
+                            <img src="./static/images/features.svg" width="1104" height="512" alt="Features">
+                        </div> -->
+
+              <!-- Items -->
+              <div
+                class="max-w-sm mx-auto grid gap-8 md:grid-cols-3 lg:gap-16 items-start md:max-w-none"
+              >
+                <!-- 1st item -->
+                <div class="flex flex-col items-center" data-aos="zoom-out">
+                  <div class="mb-4">
+                    <svg
+                      width="56"
+                      height="56"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs>
+                        <radialGradient
+                          cx="50%"
+                          cy="89.845%"
+                          fx="50%"
+                          fy="89.845%"
+                          r="89.85%"
+                          id="icon1-b"
+                        >
+                          <stop
+                            stop-color="#3B82F6"
+                            stop-opacity="1.0"
+                            offset="0%"
+                          />
+                          <stop
+                            stop-color="#F472B6"
+                            stop-opacity="1.0"
+                            offset="100%"
+                          />
+                        </radialGradient>
+                        <circle id="icon1-a" cx="28" cy="28" r="28" />
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <use fill="url(#icon1-b)" xlink:href="#icon1-a" />
+                        <g
+                          stroke="#FDF2F8"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        >
+                          <path d="M17 28h22" opacity="1.0" />
+                          <path
+                            d="M20 23v-3h3M33 20h3v3M36 33v3h-3M23 36h-3v-3"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <h4 class="h4 text-black-500 text-center mb-2">iOT Device</h4>
+                  <p class="text-lg text-gray-500 text-center">
+                    Simple to use flexible device that you can slide under your
+                    foot in your shoe. This device has 8 different pressure
+                    sensors.
+                  </p>
+                </div>
+
+                <!-- 2nd item -->
+                <div
+                  class="flex flex-col items-center"
+                  data-aos="zoom-out"
+                  data-aos-delay="200"
+                >
+                  <div class="mb-4">
+                    <svg
+                      width="56"
+                      height="56"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs>
+                        <radialGradient
+                          cx="50%"
+                          cy="89.845%"
+                          fx="50%"
+                          fy="89.845%"
+                          r="89.85%"
+                          id="icon2-b"
+                        >
+                          <stop
+                            stop-color="#3B82F6"
+                            stop-opacity="1"
+                            offset="0%"
+                          />
+                          <stop
+                            stop-color="#F472B6"
+                            stop-opacity="1"
+                            offset="100%"
+                          />
+                        </radialGradient>
+                        <circle id="icon2-a" cx="28" cy="28" r="28" />
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <use fill="url(#icon2-b)" xlink:href="#icon2-a" />
+                        <g
+                          stroke="#FDF2F8"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        >
+                          <path d="m22 24-4 4 4 4M34 24l4 4-4 4" />
+                          <path d="m26 36 4-16" opacity="1.0" />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <h4 class="h4 text-black-500 text-center mb-2">Website</h4>
+                  <p class="text-lg text-gray-500 text-center">
+                    Our website allows you to visualize data very easily with
+                    multiple different charts and details.
+                  </p>
+                </div>
+
+                <!-- 3rd item -->
+                <div
+                  class="flex flex-col items-center"
+                  data-aos="zoom-out"
+                  data-aos-delay="400"
+                >
+                  <div class="mb-4">
+                    <svg
+                      width="56"
+                      height="56"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs>
+                        <radialGradient
+                          cx="50%"
+                          cy="89.845%"
+                          fx="50%"
+                          fy="89.845%"
+                          r="89.85%"
+                          id="icon3-b"
+                        >
+                          <stop
+                            stop-color="#3B82F6"
+                            stop-opacity="1.0"
+                            offset="0%"
+                          />
+                          <stop
+                            stop-color="#F472B6"
+                            stop-opacity="1.0"
+                            offset="100%"
+                          />
+                        </radialGradient>
+                        <circle id="icon3-a" cx="28" cy="28" r="28" />
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <use fill="url(#icon3-b)" xlink:href="#icon3-a" />
+                        <g
+                          stroke="#FDF2F8"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        >
+                          <path d="m18 31 4 4 12-15" />
+                          <path d="M39 25h-3M39 30h-7M39 35H28" opacity="1.0" />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <h4 class="h4 text-black-500 text-center mb-2">App</h4>
+                  <p class="text-lg text-gray-500 text-center">
+                    Our simple to use app provides real time monitoring of the
+                    iOT device for even more capabilties.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features #2 -->
+        <section class="relative">
+          <hr />
+          <!-- Bg illustration -->
+          <div
+            class="absolute top-0 left-1/2 -z-10 ml-[390px]"
+            aria-hidden="true"
+          >
+            <img
+              src="./static/images/features-illustration.svg"
+              class="max-w-none"
+              width="608"
+              height="305"
+              alt="Illustration"
+            />
+          </div>
+
+          <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="py-12 md:py-20=">
+              <!-- Section header -->
+              <div class="max-w-3xl mx-auto text-center">
+                <h2 class="h2 font-uncut-sans mb-16">
+                  Seamless User Experience
+                </h2>
+                <div class="max-w-2xl mx-auto">
+                  <p class="text-xl text-gray-400"></p>
+                </div>
+              </div>
+
+              <!-- Section content -->
+              <div
+                class="max-w-xl mx-auto md:max-w-none flex flex-col md:flex-row md:items-center md:space-x-8 lg:space-x-16 xl:space-x-18 space-y-reverse"
+              >
+                <!-- Content -->
+                <div
+                  class="md:w-7/12 lg:w-1/2 order-1 md:order-none"
+                  data-aos="zoom-out"
+                  data-aos-delay="200"
+                >
+                  <div class="text-center md:text-left">
+                    <h3 class="h3 font-uncut-sans text-4xl mb-4">
+                      Personalized Feedback Loop
+                    </h3>
+                    <p class="text-xl text-gray-400 mb-6">
+                      GaitWatch uses a novel machine learning algorithm to track
+                      your gait over the course of the day. Graphs are generated
+                      based off of your parkinsons gait symptoms and left foot
+                      vs right foot. Each graph is personalized to your own
+                      experiences and situation.
+                    </p>
+                    <ul
+                      class="inline-flex flex-col text-lg text-gray-400 space-y-3"
+                    >
+                      <li class="flex items-center">
+                        <svg
+                          class="w-3 h-3 fill-current text-emerald-500 mr-3 shrink-0"
+                          viewBox="0 0 12 12"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"
+                          />
+                        </svg>
+                        <span>Tailored Graphs</span>
+                      </li>
+                      <li class="flex items-center">
+                        <svg
+                          class="w-3 h-3 fill-current text-emerald-500 mr-3 shrink-0"
+                          viewBox="0 0 12 12"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"
+                          />
+                        </svg>
+                        <span>Easy Identification</span>
+                      </li>
+                      <li class="flex items-center">
+                        <svg
+                          class="w-3 h-3 fill-current text-emerald-500 mr-3 shrink-0"
+                          viewBox="0 0 12 12"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"
+                          />
+                        </svg>
+                        <span>92% Accuracy ML model</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Image -->
+                <div class="md:w-5/12 lg:w-1/2" data-aos="zoom-out">
+                  <lottie-player
+                    src="https://assets1.lottiefiles.com/packages/lf20_hi95bvmx/WebdesignBg.json"
+                    background="transparent"
+                    speed="1"
+                    style="max-width: fit-content"
+                    loop
+                    autoplay
+                  ></lottie-player>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr />
+        <!-- Features #2 -->
+        <section class="relative">
+          <hr />
+          <!-- Bg illustration -->
+          <div
+            class="absolute top-0 left-1/2 -z-10 ml-[390px]"
+            aria-hidden="true"
+          >
+            <img
+              src="./static/images/features-illustration.svg"
+              class="max-w-none"
+              width="608"
+              height="305"
+              alt="Illustration"
+            />
+          </div>
+
+          <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="py-12 md:py-20=">
+              <!-- Section header -->
+              <div class="max-w-3xl mx-auto text-center">
+                <h2 class="h2 font-uncut-sans mb-16">Using the Device</h2>
+                <div class="max-w-2xl mx-auto">
+                  <p class="text-xl text-gray-400"></p>
+                </div>
+              </div>
+
+              <!-- Section content -->
+              <div
+                class="max-w-xl mx-auto md:max-w-none flex flex-col md:flex-row md:items-center md:space-x-8 lg:space-x-16 xl:space-x-18 space-y-reverse"
+              >
+                <!-- Content -->
+                <div
+                  class="md:w-7/12 lg:w-1/2 order-1 md:order-none"
+                  data-aos="zoom-out"
+                  data-aos-delay="200"
+                >
+                  <div class="text-center md:text-left">
+                    <h3 class="h3 font-uncut-sans text-4xl mb-4">
+                      GaitWatch Shoe Sole
+                    </h3>
+                    <p class="text-xl text-gray-400 mb-6">
+                      This device contains 4 load sensors on each foot sole that
+                      are laser cut to perfection to allow a comfortable fit.
+                    </p>
+                    <ul
+                      class="inline-flex flex-col text-lg text-gray-400 space-y-3"
+                    >
+                      <li class="flex items-center">
+                        <svg
+                          class="w-3 h-3 fill-current text-emerald-500 mr-3 shrink-0"
+                          viewBox="0 0 12 12"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"
+                          />
+                        </svg>
+                        <span
+                          >Advanced Monitoring and Detection Algorithms</span
+                        >
+                      </li>
+                      <li class="flex items-center">
+                        <svg
+                          class="w-3 h-3 fill-current text-emerald-500 mr-3 shrink-0"
+                          viewBox="0 0 12 12"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"
+                          />
+                        </svg>
+                        <span>Beautiful Data Visualization</span>
+                      </li>
+                      <li class="flex items-center">
+                        <svg
+                          class="w-3 h-3 fill-current text-emerald-500 mr-3 shrink-0"
+                          viewBox="0 0 12 12"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"
+                          />
+                        </svg>
+                        <span>Comfortable Sole</span>
+                      </li>
+                      <li class="flex items-center">
+                        <svg
+                          class="w-3 h-3 fill-current text-emerald-500 mr-3 shrink-0"
+                          viewBox="0 0 12 12"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"
+                          />
+                        </svg>
+                        <span>Custom Sole Designs</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Image -->
+                <div class="md:w-5/12 lg:w-1/2" data-aos="zoom-out">
+                  <img
+                    src="../static/IMG_2243.png"
+                    style="border-radius: 20%; border: 1px whitesmoke"
+                  />
+                  <!-- <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/0UQEh33LDrc"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <!-- Resources -->
+      </main>
+
+      <!-- Site footer -->
+      <footer>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <!-- Blocks -->
+          <div class="grid sm:grid-cols-12 gap-8 py-8 md:py-12">
+            <!-- 1st block -->
+            <div class="sm:col-span-12 lg:col-span-4 lg:max-w-xs">
+              <div class="mb-2">
+                <div class="flex items-center">
+                  <!-- Logo -->
+
+                  <a class="text-lg block" href="/" aria-label="Cruip">
+                    <b>GaitWatch</b>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      var typed = new Typed("#differentBusinesses", {
+        strings: [
+          "parkinsons gait",
+          "dyskinesia",
+          "degenerative diseases",
+          "cerebral palsey",
+          "muscular dystrophy",
+          "knee pain",
+          "foot trauma",
+        ],
+        typeSpeed: 100,
+        loop: true,
+        shuffe: true,
+        backSpeed: 50,
+      });
+    </script>
+
+    <script src="./static/js/vendors/alpinejs.min.js" defer></script>
+    <script src="./static/js/vendors/aos.js"></script>
+    <script src="./static/js/main.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
+</html>

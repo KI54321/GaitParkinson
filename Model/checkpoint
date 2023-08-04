@@ -1,0 +1,2 @@
+model_checkpoint_path: "gait_model_weights"
+all_model_checkpoint_paths: "gait_model_weights"
